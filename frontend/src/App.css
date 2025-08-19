@@ -1,42 +1,82 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.app-container{
+background-color: white;
+height:100vh;
+width:100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+ .login-box {
+  background: rgba(255, 255, 255, 0.15);
+  background-color: #0085FF;
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  width: 350px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+  color: #fff;
+  height: 400px;
+  font-family: 'Poppins';
+  
   }
-  to {
-    transform: rotate(360deg);
+
+.login-box h2{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.login-box::before{
+  filter: blur(10px);
   }
+
+.login-box input{
+ padding: 10px;
+ border-radius: 8px;        
+ font-size: 16px;  
+ margin: 10px 0;
+ border-color: white;
+ width: 90%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.login-box button{
+  border-radius: 15px;
+  background-color: #003465;
+  color: white;
+  font-size: 20px;
+  margin-top:auto; 
+  width: 150px;
+  border-color: #003465;
+  font-weight: bold;
+}
+.login-box button:hover{
+ background-color: #007BFF;
+ border-color: #007BFF;
+}
+.login-box title{
+  font-size: normal;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.login-box h5{
+  font-family: Arial, Helvetica, sans-serif;
+  align-self: flex-start;
+  margin-bottom: 2px;
+ text-align: start;
+ margin-left: 10px;
   }
-}
 
-.card {
-  padding: 2em;
+.login-box h6{
+  font-weight: normal;
+  cursor: pointer;
+  transition: color 0.1s;
+  font-size: 17px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  text-align: start;
+  margin-left: 100px;
 }
-
-.read-the-docs {
-  color: #888;
+.login-box h6:hover{
+  color: #007BFF;
 }
