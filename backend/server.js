@@ -22,7 +22,14 @@ app.post("/login", (req, res) => {
     res.status(401).json({ message: "Login failed", success: false });
   }
 });
+app.post("/forgot-password", (req,res)=>{
+ const {email}= req.body;
+ const user= users.find(u=> u.email===email);
+ if(!user){
+  return res.json({message: "Password reset link sent to your email if account exists"});
+ }
 
+});
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
