@@ -67,7 +67,7 @@ align-items: center;
  margin-left: 10px;
   }
 
-.login-box h6{
+.forgot-password{
   font-weight: normal;
   cursor: pointer;
   transition: color 0.1s;
@@ -76,7 +76,20 @@ align-items: center;
   margin-top: 15px;
   text-align: start;
   margin-left: 100px;
+  color: white;
 }
-.login-box h6:hover{
-  color: #007BFF;
+.forgot-password:hover{
+  color: #003465;
+}
+.register{
+  font-weight: normal;
+  font-size: 17px;
+  margin: 10px 0 5px 0; 
+}
+.bold-word.clickable{ 
+  font-weight: bolder;
+  cursor: pointer;
+}
+.clickable:hover{
+  color: #003465;
 }

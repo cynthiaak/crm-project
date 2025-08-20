@@ -31,6 +31,10 @@ function Login() {
     alert("Redirecting to password reset page...");
     navigate("/forgot-password"); 
   };
+  const register = () => {
+    alert("Redirecting to registration page...");
+    navigate("/register");
+  };
 
   return(
     <div className="app-container">
@@ -50,7 +54,7 @@ function Login() {
           value={password} 
           onChange={(e=> setPassword(e.target.value))}
         />
-        <h6 onClick={forgotPassword} style={{cursor: 'pointer', color: 'blue'}}>
+        <h6 onClick={forgotPassword} className="forgot-password">
           Forgot Password?
         </h6>
         <button 
@@ -59,6 +63,9 @@ function Login() {
         >
           Sign in
         </button>
+        <h6 onClick={register} className="register">
+          Don't have an account? Register <span className="bold-word clickable">here</span>!
+        </h6>
       </div>
     </div>
   )
