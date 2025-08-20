@@ -61,8 +61,8 @@ function Login() {
         >
           Sign in
         </button>
-        <h6 className="register">
-          Don't have an account? Register <span className="bold-word clickable" onClick={register}>here</span>!
+        <h6 onClick={register} className="register">
+          Don't have an account? Register <span onClick={register} className="bold-word clickable">here</span>!
         </h6>
       </div>
     </div>

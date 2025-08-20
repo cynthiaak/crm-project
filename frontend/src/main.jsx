@@ -7,7 +7,6 @@ import App from './App.jsx'
 import Login from './Login.jsx'
 import RMDashboard from './RMDashboard.jsx'
 import register from './register.jsx'
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
