@@ -8,10 +8,12 @@ const pool = new Pool({
   password: process.env.PG_PASSWORD,       // set in .env
   database: process.env.PG_DATABASE || 'CRM',
   idleTimeoutMillis: 30000,
-  connectionTimeoutMillis: 5000,
+  connectionTimeoutMillis: 3000,
 });
 
-pool.on('connect', () => console.log('✅ Connected to PostgreSQL pool'));
-pool.on('error', (err) => console.error('❌ PostgreSQL pool error', err));
+// pool.on('connect', () => console.log('✅ Connected to PostgreSQL pool'));
+// pool.on('error', (err) => console.error('❌ PostgreSQL pool error', err));
+
+
 
 module.exports = pool;
