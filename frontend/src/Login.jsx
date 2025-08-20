@@ -28,11 +28,9 @@ function Login() {
   }
 
   const forgotPassword = () => {
-    alert("Redirecting to password reset page...");
     navigate("/forgot-password"); 
   };
   const register = () => {
-    alert("Redirecting to registration page...");
     navigate("/register");
   };
 
@@ -63,8 +61,8 @@ function Login() {
         >
           Sign in
         </button>
-        <h6 onClick={register} className="register">
-          Don't have an account? Register <span className="bold-word clickable">here</span>!
+        <h6 className="register">
+          Don't have an account? Register <span className="bold-word clickable" onClick={register}>here</span>!
         </h6>
       </div>
     </div>
