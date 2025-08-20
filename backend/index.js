@@ -1,19 +1,24 @@
 const express = require('express');
-const cors = require('cors');
-const pool = require('./db');          // <- your PostgreSQL pool from db.js
+const cors = require('cors');          
 require('dotenv').config();            // only needed if you use a .env
+const pool = require('./db');   
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:5173'],
+  methods: ['GET','POST','PUT','DELETE','OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: false
+}));
+app.options('*', cors());
 app.use(express.json());
 
 // Health check for API
 app.get('/', (_req, res) => {
   res.send('API is running!');
 });
-
 //check DB health
 app.get('/db/health', async (_req, res) => {
   try {
@@ -36,6 +41,10 @@ app.get('/users', async (_req, res) => {
   }
 });
 
-app.listen(PORT, () => {
+
+const registerRoutes = require("./register");
+app.use("/auth", registerRoutes);
+
+app.listen(PORT, '127.0.0.1', () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
