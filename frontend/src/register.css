@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-.container{
-background-color: white;
-min-height:100vh;
-width:100%;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 24px;
-}
 
+.container-fullscreen {
+  position: fixed;     /* Lock to screen */
+  top: 0;
+  left: 0;
+  width: 100vw;        
+  height: 100vh;       
+  background: #f9f9f9; 
+  overflow: hidden;    /* Prevent scrolling */
+  display: flex;       /* Center login box */
+  justify-content: center;
+  align-items: center;
+}
  .register-box {
   background: rgba(255, 255, 255, 0.15);
-  background-color: #0085FF;
+  background-color: white;
   backdrop-filter: blur(10px);
   padding: 40px 30px;
   border-radius: 20px;
@@ -20,7 +23,7 @@ padding: 24px;
   max-width: 92vw;
   box-shadow: 0 8px 32px rgba(0,0,0,0.2);
   text-align: left;
-  color: #fff;  
+  color: black;  
   }
 
 .register-box h2{
@@ -41,24 +44,24 @@ padding: 24px;
  border-radius: 8px;        
  font-size: 16px;  
  margin: 10px 0;
- border-color: white;
+ border-color: black;
  width: 90%;
 
 }
 
 .register-box button{
   border-radius: 15px;
-  background-color: #003465;
+  background-color: #007BFF;
   color: white;
   font-size: 20px;
   margin-top:auto; 
   width: 150px;
-  border-color: #003465;
+  border-color: #007BFF;
   font-weight: bold;
 }
 .register-box button:hover{
- background-color: #007BFF;
- border-color: #007BFF;
+ background-color: #003465;
+ border-color: #003465;
 }
 .register-box title{
   font-size: normal;
