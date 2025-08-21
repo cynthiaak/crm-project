@@ -25,7 +25,7 @@ function ForgotPassword(){
     };
 
     return(
-    <div className="app-container">
+    <div className="login-fullscreen">
         <div className="forgot-password-box">
             <img src={forgotPasswordImg} alt="Forgot Password" className="logo-img"   style={{ width: '60px', height: '60px' }}  />
             <h2>Forgot your password</h2>

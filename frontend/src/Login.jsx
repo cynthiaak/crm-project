@@ -35,7 +35,7 @@ function Login() {
   };
 
   return(
-    <div className="app-container">
+    <div className="login-fullscreen">
       <div className="login-box">
         <h2>Login</h2>
         <h5>Email</h5>

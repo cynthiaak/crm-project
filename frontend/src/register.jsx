@@ -61,7 +61,7 @@ setConfirm("");
 }
 
  return(
-    <div className="container">
+    <div className="container-fullscreen">
         <form className='register-box' onSubmit={handleSubmit}>
             <h2>Register</h2>
             <h5>Full Name</h5>
