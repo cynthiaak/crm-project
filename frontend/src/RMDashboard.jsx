@@ -17,15 +17,45 @@ function RMDashboard() {
      
       <div className="sidebar">
         <h2><img src={profileIcons} alt="Profile" className="nav-icon" /> John Doe</h2>
-        <ul>
-          <li><img src={dashboardIcon} alt="Dashboard" className="nav-icon" /> Dashboard</li>
-          <li><img src={jobsIcon} alt="Jobs" className="nav-icon" /> Jobs</li>
-          <li><img src={candidatesIcon} alt="Candidates" className="nav-icon" /> Candidates</li>
-          <li><img src={tasksIcon} alt="Tasks" className="nav-icon" /> Tasks</li>
-          <li><img src={calendarIcon} alt="Calendar" className="nav-icon" /> Calendar</li>
-          <li><img src={analyticsIcon} alt="Analytics" className="nav-icon" /> Analytics</li>
-          <li><img src={settingsIcon} alt="Settings" className="nav-icon" /> Settings</li>
-        </ul>
+    <ul>
+  <li>
+    <button className="nav-button">
+      <img src={dashboardIcon} alt="Dashboard" className="nav-icon" /> Dashboard
+    </button>
+  </li>
+  <li>
+    <button className="nav-button">
+      <img src={jobsIcon} alt="Jobs" className="nav-icon" /> Jobs
+    </button>
+  </li>
+  <li>
+    <button className="nav-button">
+      <img src={candidatesIcon} alt="Candidates" className="nav-icon" /> Candidates
+    </button>
+  </li>
+  <li>
+    <button className="nav-button">
+      <img src={tasksIcon} alt="Tasks" className="nav-icon" /> Tasks
+    </button>
+  </li>
+  <li>
+    <button className="nav-button">
+      <img src={calendarIcon} alt="Calendar" className="nav-icon" /> Calendar
+    </button>
+  </li>
+  <li>
+    <button className="nav-button">
+      <img src={analyticsIcon} alt="Analytics" className="nav-icon" /> Analytics
+    </button>
+  </li>
+  <li>
+    <button className="nav-button">
+      <img src={settingsIcon} alt="Settings" className="nav-icon" /> Settings
+    </button>
+  </li>
+</ul>
+
+         <button className="logout-btn">Logout </button>
       </div>
 
     
@@ -83,6 +113,8 @@ function RMDashboard() {
             <span className="status">Shortlisted</span>
           </div>
         </div>
+      </div>
+      <div>
       </div>
     </div>
 
