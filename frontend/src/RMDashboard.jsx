@@ -136,6 +136,10 @@ function RMDashboard() {
             
         </div>
       </div>
+        <div className="applicant-resources">
+          <h1>Applicant Resources</h1>
+        </div>
+      
       <div>
       </div>
     </div>
