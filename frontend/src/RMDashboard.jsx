@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import './RMDashboard.css';
 
 import dashboardIcon from './Dashboard-icon.svg';
@@ -12,6 +13,28 @@ import profileIcons from "./profile-icon.svg";
 
 
 function RMDashboard() {
+  const navigate= useNavigate();
+  const candidatePage = () => {
+    navigate("/candidates");
+  };
+ const tasksPage = () => {
+    navigate("/tasks");
+  };
+  const calendarPage = () => {
+    navigate("/calendar");
+  };
+ const analyticsPage = () => {
+    navigate("/analytics");
+  };
+  const settingsPage = () => {
+    navigate("/settings");
+  };
+  const dashboardPage = () => {
+    navigate("/rmdashboard")
+  }
+  const handleLogout = () => {
+     navigate("/login")
+  }
   return (
     <div className="container">
      
@@ -19,43 +42,38 @@ function RMDashboard() {
         <h2><img src={profileIcons} alt="Profile" className="nav-icon" /> John Doe</h2>
     <ul>
   <li>
-    <button className="nav-button">
+    <button className="nav-button" onClick={dashboardPage}>
       <img src={dashboardIcon} alt="Dashboard" className="nav-icon" /> Dashboard
     </button>
   </li>
   <li>
-    <button className="nav-button">
-      <img src={jobsIcon} alt="Jobs" className="nav-icon" /> Jobs
-    </button>
-  </li>
-  <li>
-    <button className="nav-button">
+    <button className="nav-button" onClick={candidatePage}>
       <img src={candidatesIcon} alt="Candidates" className="nav-icon" /> Candidates
     </button>
   </li>
   <li>
-    <button className="nav-button">
+    <button className="nav-button" onClick={tasksPage}>
       <img src={tasksIcon} alt="Tasks" className="nav-icon" /> Tasks
     </button>
   </li>
   <li>
-    <button className="nav-button">
+    <button className="nav-button" onClick={calendarPage}>
       <img src={calendarIcon} alt="Calendar" className="nav-icon" /> Calendar
     </button>
   </li>
   <li>
-    <button className="nav-button">
+    <button className="nav-button" onClick ={analyticsPage}>
       <img src={analyticsIcon} alt="Analytics" className="nav-icon" /> Analytics
     </button>
   </li>
   <li>
-    <button className="nav-button">
+    <button className="nav-button" onClick ={settingsPage}>
       <img src={settingsIcon} alt="Settings" className="nav-icon" /> Settings
     </button>
   </li>
 </ul>
 
-         <button className="logout-btn">Logout </button>
+         <button className="logout-btn" onClick={handleLogout}>Logout </button>
       </div>
 
     
@@ -112,6 +130,10 @@ function RMDashboard() {
             <span className="editor">Joe</span>
             <span className="status">Shortlisted</span>
           </div>
+
+        </div>
+        <div className="application-bar-box">
+            
         </div>
       </div>
       <div>
