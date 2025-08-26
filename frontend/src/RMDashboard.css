@@ -229,6 +229,9 @@ input:focus {
   margin-top: 5px;
   grid-template-columns: 180px 200px 150px 120px 120px 120px; 
 }
+.candidates-list:hover{
+  background-color: #dddddd;
+}
 .candidates-box h2{
   margin-bottom:1px;
   padding-top: 10px;
@@ -297,6 +300,10 @@ input:focus {
   appearance: none;
   transition: background 0.2s;
   padding: 8px 30px 8px 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.sort-section h6{
+  font-size: 14px;
 }
 .sort-dropdown-section::after {
   content: '▼';               
@@ -339,6 +346,9 @@ input:focus {
   margin-top: 115px;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
+.applicant-resources h1{
+  font-weight: bold;
+}
 .applicant-resources:hover{
   transform: scale(1.04);
 }
@@ -356,6 +366,7 @@ gap: 20px;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   margin-top: 12px;
+
 }
 .source-effectiveness-box h2{
   font-weight: normal;

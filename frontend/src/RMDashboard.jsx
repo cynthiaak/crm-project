@@ -316,7 +316,9 @@ const total = sourceData.reduce((acc, item) => acc + item.value, 0);
           </div>
         </div>
       </div>
-      <div className="applicant-resources"></div>
+      <div className="applicant-resources">
+        <h1>Tasks</h1>
+      </div>
       <div></div>
     </div>
   );
