@@ -9,17 +9,25 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch('http://localhost:3000/login', {
+      const response = await fetch('http://localhost:3000/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
       });
 
-      const data = await response.json();
+      // const data = await response.json();
 
-      if (data.success) {
-        navigate("/rmdashboard");
+      // if (data.success) {
+      //   navigate("/rmdashboard");
+      // }
+        const text = await response.text();
+      let data = {};
+      try { data = text ? JSON.parse(text) : {}; } catch {}
+      if (!response.ok) {
+        alert(data.message || `Login failed (HTTP ${response.status})`);
+        return;
       }
+      navigate('/rmdashboard');
 
     } catch (error) {
       console.error("Login error:", error);

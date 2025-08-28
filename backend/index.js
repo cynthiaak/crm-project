@@ -6,19 +6,11 @@ const pool = require('./db');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors({
-  origin: ['http://localhost:5173'],
-  methods: ['GET','POST','PUT','DELETE','OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: false
-}));
-app.options('*', cors());
+app.use(cors({origin: ['http://localhost:5173']}));
 app.use(express.json());
 
 // Health check for API
-app.get('/', (_req, res) => {
-  res.send('API is running!');
-});
+app.get('/', (_req, res) => {res.send('API is running!');});
 //check DB health
 app.get('/db/health', async (_req, res) => {
   try {
@@ -30,21 +22,11 @@ app.get('/db/health', async (_req, res) => {
   }
 });
 
-//check user route is working (make sure a users table exists in your CRM DB)
-app.get('/users', async (_req, res) => {
-  try {
-    const r = await pool.query('SELECT id, email, full_name FROM users ORDER BY id');
-    res.json(r.rows);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: err.message });
-  }
-});
 
 
 const registerRoutes = require("./register");
 app.use("/auth", registerRoutes);
 
-app.listen(PORT, '127.0.0.1', () => {
+app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
