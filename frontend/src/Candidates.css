@@ -1,0 +1,205 @@
+.candidates-container {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  flex-direction: row;
+  height: 100%;
+}
+.candidates-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.candidate-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.candidate-name {
+  font-weight: bold;
+}
+
+.candidate-role,
+.candidate-date,
+.editor,
+.status {
+  color: #666;
+}
+.main-candidates{
+  height: 100%;
+  width: 80%;
+  margin-top: 50px;
+
+}
+.main-candidates-box{
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  padding-left: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.main-candidates-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+.candidate-info {
+  display: flex;
+  flex-direction: column;
+}
+.candidate-name {
+  font-weight: bold;
+} 
+.main-candidates-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  gap: 10px;
+}
+.candidate-info {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.main-candidates-list:hover{
+    background-color: #dddddd;
+}
+.candidate-role {
+  width: 250px;
+}
+
+.candidate-date {
+  width: 120px;
+}
+
+.editor {
+  width: 120px;
+}
+
+.status {
+  width: 120px;
+}
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 4px;
+   box-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+.status-dot.pending {
+  background-color: #FFA50080; /* orange with opacity */
+}
+
+.status-dot.shortlisted {
+  background-color: #28a74580; /* green with opacity */
+}
+
+.status-dot.rejected {
+  background-color: #dc354580; /* red with opacity */
+}
+
+.status-dot.reviewed {
+  background-color: #17a2b880; /* teal with opacity */
+}
+
+.status:hover .status-dot {
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+}
+.candidates-header-row{
+  background-color: #9CE5DE;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  height: 20px;
+  padding-top: 20px;
+  padding-left: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+
+}
+.candidates-header-row span {
+  flex-shrink: 0;
+}
+.header-name, .candidate-info { width: 200px; }
+.header-role, .candidate-role { width: 220px; }
+.header-date, .candidate-date { width: 120px; }
+.header-editor, .editor { width: 110px; }
+.header-status, .status { width: 120px; }
+
+.header-name{
+  padding-right: 245px;
+}
+.header-role{
+  padding-right: 285px;
+}
+.header-date{
+  padding-right: 180px;
+}
+.header-editor{
+  padding-right: 170px;
+}
+.candidates-top-section{
+  display: flex;
+  align-items: center;
+  gap: 800px;
+  margin-top: -50px;
+}
+.main-sort-section {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+  font-size: 14px;
+}
+.main-sort-dropdown-section{
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  position: relative; 
+  display: inline-block;
+  }
+
+.main-sort-dropdown {
+
+  background-color: #f5f5f5;
+  width: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  appearance: none;
+  transition: background 0.2s;
+  padding: 8px 30px 8px 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main-sort-section h6{
+  font-size: 16px;
+  font-weight: bold;
+}
+.main-sort-dropdown-section::after {
+  content: '▼';               
+  position: absolute;
+  right: 7px;             
+  top: 50%;               
+  transform: translateY(-50%);
+  pointer-events: none;      
+  color: #555;              
+  font-size: 12px;   
+  line-height: 1;  
+  padding-top: 3px;          
+}
+.main-title{
+  font-weight: bold;
+  margin-left: 0;
+}
+.candidates-top-section h1{
+  font-weight: bold;
+  font-size: 30px;
+}
