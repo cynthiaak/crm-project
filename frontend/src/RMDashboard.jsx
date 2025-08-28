@@ -74,7 +74,9 @@ const COLORS = [
 const total = sourceData.reduce((acc, item) => acc + item.value, 0);
 
   return (
+    
     <div className="container">
+      
       <div className="sidebar">
         <h2>
           <img src={profileIcons} alt="Profile" className="nav-icon" /> John Doe
@@ -121,9 +123,9 @@ const total = sourceData.reduce((acc, item) => acc + item.value, 0);
           Logout{" "}
         </button>
       </div>
-
+         
       <div className="main">
-        <header className="header">
+           <header className="header">
           <h1>Dashboard</h1>
           <input
             type="text"
@@ -131,9 +133,8 @@ const total = sourceData.reduce((acc, item) => acc + item.value, 0);
             placeholder="Search candidate, vacancy, etc.."
           />
         </header>
-
-        <h2 className="greeting">Hello, John! 👋</h2>
-
+       <h2 className="greeting">Hello, John! 👋</h2>
+       <div className="stats-and-tasks">
         <div className="stats-container">
           <div className="stat-box">
             <h3>Applications</h3>
@@ -166,6 +167,10 @@ const total = sourceData.reduce((acc, item) => acc + item.value, 0);
               <span className="stat-label danger">-3% from last week</span>
             </div>
           </div>
+             <div className="tasks-box">
+      <h2>Tasks</h2>
+    </div>
+        </div>
         </div>
         <div className="dashboard-content">
           <div className="candidates-box">
@@ -183,7 +188,7 @@ const total = sourceData.reduce((acc, item) => acc + item.value, 0);
                 </div>
               </div>
             </div>
-
+     
             <div className="candidates-list">
               <div className="candidate-info">
                 <span className="candidate-name">Nour Khoury</span>
@@ -314,11 +319,11 @@ const total = sourceData.reduce((acc, item) => acc + item.value, 0);
       </div>
           </div>
           </div>
+        
         </div>
+       
       </div>
-      <div className="applicant-resources">
-        <h1>Tasks</h1>
-      </div>
+      
       <div></div>
     </div>
   );
