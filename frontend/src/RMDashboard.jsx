@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./RMDashboard.css";
+import CVUpload from "./CVupload"; 
+
+import "./CVUpload.css";
 import {
   LineChart,
   Line,
@@ -170,7 +173,7 @@ const total = sourceData.reduce((acc, item) => acc + item.value, 0);
           </div>
              <div className="tasks-box">
 
-      
+       <CVUpload onUploaded={() => console.log("CV uploaded! Refresh candidates list here")} />
     </div>
         </div>
         </div>
@@ -235,17 +238,7 @@ const total = sourceData.reduce((acc, item) => acc + item.value, 0);
               <span className="editor">Lara</span>
               <span className="status">Shortlisted</span>
             </div>
-            <div className="candidates-list">
-              <div className="candidate-info">
-                <span className="candidate-name">John Smith</span>
-                <span className="email">johnsmith@gmail.com</span>
-              </div>
-
-              <span className="candidate-role">Frontend Developer</span>
-              <span className="candidate-date">25-6-2025</span>
-              <span className="editor">Joe</span>
-              <span className="status">Shortlisted</span>
-            </div>
+      
           </div>
           <div className="dashboard-content-bottom">
           <div className="application-bar-box" style={{ height: 320 }}>
@@ -298,6 +291,9 @@ const total = sourceData.reduce((acc, item) => acc + item.value, 0);
         <span className="total-applications">Total Applications</span>
       </div>
           </div>
+           <div className="schedule-box">
+            <h1>Schedule</h1>
+            </div>
           </div>
         
         </div>

@@ -1,20 +1,28 @@
 const express = require('express');
 const cors = require('cors');          
-require('dotenv').config();            // only needed if you use a .env
+require('dotenv').config();            
 const pool = require('./db');   
+const registerRoutes = require("./register");  
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const router = express.Router();
-const users = [
-  { email: "test@gmail.com", password: "12345" }
-];
-app.use(cors({origin: ['http://localhost:5173']}));
+
+// ✅ CORS must come before routes
+app.use(cors({
+  origin: ['http://localhost:5173', 'http://localhost:5174'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
+
 app.use(express.json());
 
-// Health check for API
-app.get('/', (_req, res) => {res.send('API is running!');});
-//check DB health
+// ✅ Register routes
+app.use("/auth", registerRoutes);
+
+// Health check
+app.get('/', (_req, res) => res.send('API is running!'));
+
+// DB health
 app.get('/db/health', async (_req, res) => {
   try {
     const r = await pool.query('SELECT NOW() AS now');
@@ -25,19 +33,9 @@ app.get('/db/health', async (_req, res) => {
   }
 });
 
-
-app.post("/login", (req, res) => {
-  const {email, password} = req.body;
-  const user = users.find(u => u.email === email && u.password === password);
-
-  if (user) {
-    res.status(200).json({ message: "Login successful", success: true });
-  } else {
-    res.status(401).json({ message: "Login failed", success: false });
-  }
-});
-const registerRoutes = require("./register");
-app.use("/auth", registerRoutes);
+// Optional: remove this login if you are using DB login instead
+// const users = [ { email: "test@gmail.com", password: "12345" } ];
+// app.post("/login", (req, res) => { ... });
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
