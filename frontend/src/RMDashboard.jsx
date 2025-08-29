@@ -47,6 +47,7 @@ function RMDashboard() {
   const handleLogout = () => {
     navigate("/login");
   };
+
   const data = [
     { date: "15 Aug", applied: 200, shortlisted: 60 },
     { date: "16 Aug", applied: 220, shortlisted: 80 },
@@ -168,7 +169,8 @@ const total = sourceData.reduce((acc, item) => acc + item.value, 0);
             </div>
           </div>
              <div className="tasks-box">
-      <h2>Tasks</h2>
+
+      
     </div>
         </div>
         </div>
@@ -242,28 +244,6 @@ const total = sourceData.reduce((acc, item) => acc + item.value, 0);
               <span className="candidate-role">Frontend Developer</span>
               <span className="candidate-date">25-6-2025</span>
               <span className="editor">Joe</span>
-              <span className="status">Shortlisted</span>
-            </div>
-            <div className="candidates-list">
-              <div className="candidate-info">
-                <span className="candidate-name">John Smith</span>
-                <span className="email">johnsmith@gmail.com</span>
-              </div>
-
-              <span className="candidate-role">Frontend Developer</span>
-              <span className="candidate-date">25-6-2025</span>
-              <span className="editor">Cynthia</span>
-              <span className="status">Shortlisted</span>
-            </div>
-            <div className="candidates-list">
-              <div className="candidate-info">
-                <span className="candidate-name">John Smith</span>
-                <span className="email">johnsmith@gmail.com</span>
-              </div>
-
-              <span className="candidate-role">Frontend Developer</span>
-              <span className="candidate-date">25-6-2025</span>
-              <span className="editor">Tala</span>
               <span className="status">Shortlisted</span>
             </div>
           </div>

@@ -5,7 +5,10 @@ const pool = require('./db');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
+const router = express.Router();
+const users = [
+  { email: "test@gmail.com", password: "12345" }
+];
 app.use(cors({origin: ['http://localhost:5173']}));
 app.use(express.json());
 
@@ -23,7 +26,16 @@ app.get('/db/health', async (_req, res) => {
 });
 
 
+app.post("/login", (req, res) => {
+  const {email, password} = req.body;
+  const user = users.find(u => u.email === email && u.password === password);
 
+  if (user) {
+    res.status(200).json({ message: "Login successful", success: true });
+  } else {
+    res.status(401).json({ message: "Login failed", success: false });
+  }
+});
 const registerRoutes = require("./register");
 app.use("/auth", registerRoutes);
 
