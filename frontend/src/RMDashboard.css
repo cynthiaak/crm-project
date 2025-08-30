@@ -217,15 +217,14 @@ input:focus {
 .candidates-box {
   min-width: 767px;
   max-width: 767px;
-  min-height: 450px;
-  max-height: 450px;
+  min-height: 410px;
+  max-height: 410px;
   background: #fff;
   padding-left: 20px;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   margin-top: -420px;
   transition: transform 0.3s ease, background-color 0.3s ease;
-
 }
 
 .candidates-list {
@@ -243,9 +242,7 @@ input:focus {
 .candidates-box h2{
   margin-bottom:1px;
 }
-.candidates-box:hover{
-  transform: scale(1.03);
-}
+
 .status.shortlisted { background: #fff3cd; color: #856404; }
 .status.hired { background: #d4edda; color: #155724; }
 .status.rejected { background: #f8d7da; color: #721c24; }
@@ -340,9 +337,7 @@ input:focus {
   flex-direction: column; 
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.application-bar-box:hover{
-  transform: scale(1.03);
-}
+
 .application-bar-box h2{
   font-weight: normal;
   font-size: 20px;
@@ -361,16 +356,13 @@ input:focus {
 .applicant-resources h1{
   font-weight: bold;
 }
-.applicant-resources:hover{
-  transform: scale(1.04);
-}
 
 .dashboard-content-bottom{
 display: flex;
 gap: 20px;
 }
 .source-effectiveness-box{
-  width: 380px;
+  width: 385px;
   height: 348px;
   background: #fff;
   padding-left: 3px;
@@ -381,9 +373,7 @@ gap: 20px;
   transition: transform 0.3s ease, background-color 0.3s ease;
 
 }
-.source-effectiveness-box:hover{
-  transform: scale(1.03);
-}
+
 .source-effectiveness-box h2{
   font-weight: normal;
   font-size: 20px;
@@ -419,18 +409,28 @@ gap: 20px;
 
 .tasks-box {
   flex: 1; /* takes remaining space */
-  height: 500px;
+  height: 490px;
   background-color: rgba(251, 202, 185, 0.7);
   border-radius: 12px;
   overflow-y: auto; 
   margin-left: 20px;
   padding-left: 20px;
   transition: transform 0.2s ease, background-color 0.3s ease;
-}
+  display: flex;
+  align-items: center; 
+
+}    
 .tasks-box h2{
   color: black;
 
 }
-.tasks-box:hover{
-  transform: scale(1.03);
+
+.schedule-box{
+  background-color: rgba(156, 229, 222, 0.7);
+  border-radius: 12px;
+  overflow-y: auto;
+  padding-left: 20px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  width: 420px;
+  margin-top: 20px;
 }

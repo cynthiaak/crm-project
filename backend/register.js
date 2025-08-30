@@ -1,9 +1,11 @@
 const express = require("express");
+
 const bcrypt = require("bcryptjs"); //hash passwords
 const pool = require("./db"); //conection with the db
-
+require('dotenv').config();
 const router = express.Router();    
-
+const app = express();
+app.use(express.json());
 router.post('/register', async (req, res) => {
   try {
     const { fullName, email, password } = req.body;
