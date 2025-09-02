@@ -1,0 +1,58 @@
+.main-applicant{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers the photo & card horizontally */
+  padding: 20px;       /* optional spacing from page edges */
+  margin: 0;
+}
+
+.main-applicant img{
+    width: 150px;
+    margin-left: 100px;
+}
+.main-applicant h1{
+    margin-left: 80px;
+}
+.main-applicant h2{
+ margin-left: 80px;
+ margin-top: 5px;
+ font-size: 30px;
+}
+.applicant-role {
+margin-top: -15px;
+ font-size: 20px;
+ color: #a9a9a9;
+ padding-left: 100px;
+}
+
+.info-icon {
+  width: 14px;
+  height: 20px;
+}
+
+
+.info-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: -50px;
+}
+.applicant-info-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;               /* icon close to text */
+  font-size: 14px;
+  padding: 6px 0;           /* vertical spacing for border */
+  border-bottom: 1px solid #ccc; /* line under icon + text */
+}
+
+.info-icon {
+  width: 16px;
+  height: 16px;
+}

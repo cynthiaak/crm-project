@@ -36,6 +36,9 @@ function Candidates(){
   const handleSortChange = (e) => {
     setSortKey(e.target.value);
   }
+ const handleApplicant=()=>{
+  navigate("/applicant")
+ }
   const candidates = [
  { name: "Nour Khoury", email: "nourkhoury@gmail.com", role: "Frontend Developer", date: "12-8-2025", editor: "Sandra", status: "Shortlisted" },
   { name: "John Smith", email: "johnsmith@gmail.com", role: "Frontend Developer", date: "25-6-2025", editor: "Elie", status: "Shortlisted" },
@@ -126,7 +129,8 @@ function Candidates(){
   <div className="main-candidates-box">
    
 {sortedCandidates.map((c, index) => (
-  <div key={index} className="main-candidates-list">
+  <div key={index} className="main-candidates-list" onClick={() => navigate("/applicant", { state: { candidate: { ...c, phone: "123456", cv: "/path/to/cv.pdf" } } })}
+ style={{cursor:"pointer"}}>
     <div className="candidate-info">
       <span className="candidate-name">{c.name}</span>
       <span className="email">{c.email}</span>
@@ -135,7 +139,7 @@ function Candidates(){
     <span className="candidate-date">{c.date}</span>
     <span className="editor">{c.editor}</span>
     <span className="status">
-        <span className={`status-dot ${c.status.toLowerCase()}`}></span>
+    <span className={`status-dot ${c.status.toLowerCase()}`}></span>
       {c.status}
       </span>
   </div>
