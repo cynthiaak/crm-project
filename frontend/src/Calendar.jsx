@@ -6,7 +6,6 @@ import dashboardIcon from "./Dashboard-icon.svg";
 import candidatesIcon from "./people-icon.svg";
 import tasksIcon from "./tasks-icon.svg";
 import calendarIcon from "./calendar-icon.svg";
-import analyticsIcon from "./analytics-icon.svg";
 import settingsIcon from "./settings-icon.svg";
 import profileIcons from "./profile-icon.svg";
 
@@ -126,9 +125,7 @@ export default function Calendar(){
           <li><button className="nav-button" onClick={calendarPage}>
             <img src={calendarIcon} alt="Calendar" className="nav-icon" /> Calendar
           </button></li>
-          <li><button className="nav-button" onClick={analyticsPage}>
-            <img src={analyticsIcon} alt="Analytics" className="nav-icon" /> Analytics
-          </button></li>
+      
           <li><button className="nav-button" onClick={settingsPage}>
             <img src={settingsIcon} alt="Settings" className="nav-icon" /> Settings
           </button></li>
