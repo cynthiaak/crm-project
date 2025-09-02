@@ -9,6 +9,13 @@ import tasksIcon from "./tasks-icon.svg";
 import calendarIcon from "./calendar-icon.svg";
 import analyticsIcon from "./analytics-icon.svg";
 import settingsIcon from "./settings-icon.svg";
+import dashboardIcon from './Dashboard-icon.svg';
+import jobsIcon from './job-icon.svg';
+import candidatesIcon from './people-icon.svg';
+import tasksIcon from './tasks-icon.svg'; 
+import calendarIcon from './calendar-icon.svg'; 
+
+import settingsIcon from './settings-icon.svg'; 
 import profileIcons from "./profile-icon.svg";
 const STORAGE_KEY = 'crm_calendar_events_v1';
 

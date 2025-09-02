@@ -1,11 +1,11 @@
 import { useState } from 'react';
+import './Settings.css'
 import { useNavigate } from "react-router-dom";
 import dashboardIcon from './Dashboard-icon.svg';
 import jobsIcon from './job-icon.svg';
 import candidatesIcon from './people-icon.svg';
 import tasksIcon from './tasks-icon.svg'; 
 import calendarIcon from './calendar-icon.svg'; 
-import analyticsIcon from './analytics-icon.svg'; 
 import settingsIcon from './settings-icon.svg'; 
 import profileIcons from "./profile-icon.svg";
 function Settings(){
@@ -57,11 +57,7 @@ function Settings(){
               <img src={calendarIcon} alt="Calendar" className="nav-icon" /> Calendar
             </button>
           </li>
-          <li>
-            <button className="nav-button" onClick ={analyticsPage}>
-              <img src={analyticsIcon} alt="Analytics" className="nav-icon" /> Analytics
-            </button>
-          </li>
+       
           <li>
             <button className="nav-button" onClick ={settingsPage}>
               <img src={settingsIcon} alt="Settings" className="nav-icon" /> Settings
@@ -71,8 +67,59 @@ function Settings(){
         
                  <button className="logout-btn" onClick={handleLogout}>Logout </button>
               </div>
-               <h1>Settings page</h1>
+             <div className="main-settings-content">
+         <h1 className="settings-title">Settings</h1>
+
+
+  <div className="settings-section">
+    <h2>Profile</h2>
+    <div className="settings-item">
+      <label>Name</label>
+      <input type="text" placeholder="John Doe" className="settings-input" />
+    </div>
+    <div className="settings-item">
+      <label>Email</label>
+      <input type="email" placeholder="johndoe@email.com" className="settings-input" />
+    </div>
+    <button className="save-btn">Save Changes</button>
+  </div>
+
+
+  <div className="settings-section">
+    <h2>Preferences</h2>
+    <div className="settings-item">
+      <label>Theme</label>
+      <select className="settings-input">
+        <option>Light</option>
+        <option>Dark</option>
+        <option>System</option>
+      </select>
+    </div>
+    <div className="settings-item">
+      <label>Language</label>
+      <select className="settings-input">
+        <option>English</option>
+        <option>French</option>
+        <option>Arabic</option>
+      </select>
+    </div>
+  </div>
+
+  <div className="settings-section">
+    <h2>Security</h2>
+    <div className="settings-item">
+      <label>Change Password</label>
+       <p className="settings-note">
+    To change your password, click the button below. A link will be sent to your email.
+  </p>
+    </div>
+    <button className="save-btn">Change Password</button>
+  </div>
+</div>
         </div>
+     
+
+    
     )
 }
 

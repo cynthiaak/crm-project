@@ -6,7 +6,7 @@ import ForgotPassword from "./ForgotPassword.jsx";
 import Candidates from "./Candidates.jsx";
 import Tasks from "./Tasks.jsx";
 import Calendar from "./Calendar.jsx";
-import Analytics from "./Analytics.jsx";
+
 import Settings from "./Settings.jsx";
 function App() {
   return (
@@ -19,7 +19,6 @@ function App() {
         <Route path="/candidates" element={<Candidates />} />
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/calendar" element={<Calendar />} />
-          <Route path="/analytics" element={<Analytics />} />
     <Route path="/settings" element={<Settings />} />
       </Routes>
 

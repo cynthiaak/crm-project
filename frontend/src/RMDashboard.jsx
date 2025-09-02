@@ -23,7 +23,6 @@ import jobsIcon from "./job-icon.svg";
 import candidatesIcon from "./people-icon.svg";
 import tasksIcon from "./tasks-icon.svg";
 import calendarIcon from "./calendar-icon.svg";
-import analyticsIcon from "./analytics-icon.svg";
 import settingsIcon from "./settings-icon.svg";
 import profileIcons from "./profile-icon.svg";
 
@@ -38,9 +37,7 @@ function RMDashboard() {
   const calendarPage = () => {
     navigate("/calendar");
   };
-  const analyticsPage = () => {
-    navigate("/analytics");
-  };
+ 
   const settingsPage = () => {
     navigate("/settings");
   };
@@ -109,12 +106,7 @@ const total = sourceData.reduce((acc, item) => acc + item.value, 0);
               Calendar
             </button>
           </li>
-          <li>
-            <button className="nav-button" onClick={analyticsPage}>
-              <img src={analyticsIcon} alt="Analytics" className="nav-icon" />{" "}
-              Analytics
-            </button>
-          </li>
+       
           <li>
             <button className="nav-button" onClick={settingsPage}>
               <img src={settingsIcon} alt="Settings" className="nav-icon" />{" "}
@@ -180,7 +172,11 @@ const total = sourceData.reduce((acc, item) => acc + item.value, 0);
         <div className="dashboard-content">
           <div className="candidates-box">
             <div className="candidates-header">
-              <h2>Candidates</h2>
+              <div className="candidates-title">
+                 <h2>Candidates</h2>
+              <h5>(1,236)</h5>
+              </div>
+             
               <div className="sort-section">
                 <h6>Sort by</h6>
                 <div className="sort-dropdown-section">
@@ -193,7 +189,13 @@ const total = sourceData.reduce((acc, item) => acc + item.value, 0);
                 </div>
               </div>
             </div>
-     
+        <div className="candidates-table-header">
+      <span className="header-name">Name</span>
+      <span className="header-role">Role</span>
+      <span className="header-date">Date</span>
+      <span className="header-editor">Editor</span>
+      <span className="header-status">Status</span>
+    </div>
             <div className="candidates-list">
               <div className="candidate-info">
                 <span className="candidate-name">Nour Khoury</span>
