@@ -32,6 +32,8 @@ app.get('/db/health', async (_req, res) => {
     res.status(500).json({ ok: false, error: err.message });
   }
 });
+app.get('/health', (_req, res) => res.json({ ok: true }));
+
 
 // Optional: remove this login if you are using DB login instead
 // const users = [ { email: "test@gmail.com", password: "12345" } ];
