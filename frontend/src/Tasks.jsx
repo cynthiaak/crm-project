@@ -86,7 +86,7 @@ export default function Tasks(){
         title={sidebarCollapsed ? "Show sidebar" : "Hide sidebar"}
         aria-label="Toggle sidebar"
       >
-        {sidebarCollapsed ? "☰" : "x"}
+        {sidebarCollapsed ? "☰" : "☰"}
       </button>
       <div className="sidebar">
         <h2><img src={profileIcons} alt="Profile" className="nav-icon" /> John Doe</h2>
