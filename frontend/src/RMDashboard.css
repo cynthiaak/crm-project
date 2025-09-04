@@ -1,9 +1,9 @@
 body {
-  margin: 0;
+   margin: 0;
   background-color: #f5f5f5;
   font-family: 'Poppins', sans-serif;
   width: 100%;
-  min-height: 100vh;
+  height: 100%; 
 }
 
 .container {
@@ -16,20 +16,64 @@ body {
 }
 
 .sidebar {
-  min-width: 200px; 
-  max-width: 250px;
+  /* min-width: 250px;  */
+  width: 250px;
+  /* max-height: 700px; */
+  height: calc(100vh - 20px);
   background-color: white;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   padding: 20px;
   position: sticky;
   top: 10px; 
+  overflow-y: auto;
+}
+
+.container.sidebar-collapsed.main{width: 100%;}
+.container.sidebar-collapsed .candidates-box {
+  min-width: 0;
+  max-width: none;
+  width: 69%;
+  margin-left: 0;
+}
+.container.sidebar-collapsed .tasks-box {
+  margin-right: 0;
+  /* margin-left: 50px; */
+}
+.container.sidebar-collapsed .stat-box {
+  width: 100px;
+} 
+.container.sidebar-collapsed .dashboard-content-bottom{
+  gap: 44px;
+  width: 100%;
+}
+.container.sidebar-collapsed .application-bar-box {
+  width: 700px;
+}
+.container.sidebar-collapsed .schedule-box {
+  margin-left: 50px;
+  width: 530px;
+  margin-right: 0;
+}
+.container.sidebar-collapsed .source-effectiveness-box {
+  width: 700px;
+}
+.container.sidebar-collapsed .sidebar {
+  width: 0 ;
+  min-width: 0 ;
+  padding: 0 ;
+  transform: translateX(-100%) ;
+  opacity: 0;
+  pointer-events: none;       
+}
+.container.is-collapsed .main {
+  margin-left: 0;
 }
 
 .logout-btn{
   border-radius: 10px;
   font-size: 20px;
-  margin-top: 470px;
+  margin-top:230px;
   border: none;
   background-color: white;
   align-self: center;
@@ -83,6 +127,24 @@ body {
   gap: 10px;
   width: 100%;   
 }
+
+.sidebar-toggle {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 1000;
+  height: 36px;
+  min-width: 36px;
+  padding: 0 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+.sidebar-toggle:hover { box-shadow: 0 6px 18px rgba(0,0,0,.08); }
 
 .header {
   flex-shrink: 0;
@@ -153,8 +215,9 @@ input:focus {
  margin-top: 10px;
 }
 .stat-box {
-  min-width: 167px;    
-  max-width: 167px;     
+  /* min-width: 167px;
+  max-width: 167px; */
+  width: 167px;
   height: 50px;
   flex: 1;
   background: #fff;
@@ -429,14 +492,14 @@ gap: 20px;
 }
 
 .tasks-box {
-  flex: 1; /* takes remaining space */
+  flex: 0 0 420px;
   height: 490px;
+  min-width: 420px;
+  max-width: 420px;
   background-color: rgba(251, 202, 185, 0.7);
   border-radius: 12px;
   overflow-y: auto; 
   margin-left: 20px;
-  padding-left: 20px;
-  transition: transform 0.2s ease, background-color 0.3s ease;
   display: flex;
   align-items: center; 
 
