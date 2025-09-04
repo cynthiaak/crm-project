@@ -431,7 +431,7 @@ gap: 20px;
 .tasks-box {
   flex: 1; /* takes remaining space */
   height: 490px;
-  background-color: rgba(251, 202, 185, 0.7);
+  background-color: #f5f5f5;
   border-radius: 12px;
   overflow-y: auto; 
   margin-left: 20px;

@@ -128,6 +128,7 @@ const filteredCandidates = sortedCandidates.filter(c => {
               </div>
                <div className="stage-filters">
                {stages.map((stage) => (
+                
               <button
              key={stage.key}
              className={`stage-button ${selectedStage === stage.key ? "active" : ""}`}
