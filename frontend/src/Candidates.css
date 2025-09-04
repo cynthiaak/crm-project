@@ -95,19 +95,19 @@
   margin-right: 4px;
    box-shadow: 0 0 2px rgba(0,0,0,0.2);
 }
-.status-dot.pending {
+.status-dot.freshlead {
   background-color: #FFA50080; /* orange with opacity */
 }
 
-.status-dot.shortlisted {
+.status-dot.contacted {
   background-color: #28a74580; /* green with opacity */
 }
 
-.status-dot.rejected {
+.status-dot.follow-upfunnel {
   background-color: #dc354580; /* red with opacity */
 }
 
-.status-dot.reviewed {
+.status-dot.reconnect {
   background-color: #17a2b880; /* teal with opacity */
 }
 
@@ -134,7 +134,7 @@
 .header-role, .candidate-role { width: 220px; }
 .header-date, .candidate-date { width: 120px; }
 .header-editor, .editor { width: 110px; }
-.header-status, .status { width: 120px; }
+.header-status, .status { width: 180px; }
 
 .header-name{
   padding-right: 245px;
@@ -202,4 +202,29 @@
 .candidates-top-section h1{
   font-weight: bold;
   font-size: 30px;
+}
+.stage-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.stage-button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+.stage-button.active {
+  background: #FBCAB9; 
+  color: white;
+  border-color: #FBCAB9;
+}
+
+.stage-button:hover {
+  background: #FBCAB9;
 }
