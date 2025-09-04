@@ -164,3 +164,16 @@
 .row { display:flex; gap:8px; }
 .col { flex:1; }
 .modal-actions { display:flex; gap:8px; margin-top:12px; }
+
+
+.container.sidebar-collapsed .sidebar {
+  width: 0 ;
+  min-width: 0 ;
+  padding: 0 ;
+  transform: translateX(-100%) ;
+  opacity: 0;
+  pointer-events: none;       
+}
+.container.sidebar-collapsed .main{
+  width: 100%;
+}

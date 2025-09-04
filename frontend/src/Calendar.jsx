@@ -47,6 +47,13 @@ function useLocalEvents(){
 }
 
 export default function Calendar(){
+    const [sidebarCollapsed, setSidebarCollapsed] = useState(
+    () => localStorage.getItem("sidebarCollapsed") === "1"
+  );
+  useEffect(() => {
+    localStorage.setItem("sidebarCollapsed", sidebarCollapsed ? "1" : "0");
+  }, [sidebarCollapsed]);
+  
   const navigate = useNavigate();
 
   // ----- sidebar nav -----
@@ -108,7 +115,16 @@ export default function Calendar(){
   const monthLabel = cursor.toLocaleString(undefined, { month: "long", year: "numeric" });
 
   return (
-    <div className="container">
+     <div className={`container ${sidebarCollapsed ? "sidebar-collapsed" : ""}`}>
+      {/* Toggle button */}
+      <button
+        className="sidebar-toggle"
+        onClick={() => setSidebarCollapsed(v => !v)}
+        title={sidebarCollapsed ? "Show sidebar" : "Hide sidebar"}
+        aria-label="Toggle sidebar"
+      >
+        {sidebarCollapsed ? "☰" : "x"}
+      </button>
       {/* SIDEBAR */}
       <div className="sidebar">
         <h2><img src={profileIcons} alt="Profile" className="nav-icon" /> John Doe</h2>

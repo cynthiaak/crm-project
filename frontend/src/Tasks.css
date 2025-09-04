@@ -99,4 +99,14 @@ padding: 16px;
   align-self: center;
 }
 
-
+.container.sidebar-collapsed .sidebar {
+  width: 0 ;
+  min-width: 0 ;
+  padding: 0 ;
+  transform: translateX(-100%) ;
+  opacity: 0;
+  pointer-events: none;       
+}
+.container.sidebar-collapsed .main{
+  width: 100%;
+}

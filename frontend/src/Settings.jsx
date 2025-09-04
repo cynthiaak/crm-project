@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Settings.css'
 import { useNavigate } from "react-router-dom";
 import dashboardIcon from './Dashboard-icon.svg';
@@ -9,6 +9,13 @@ import calendarIcon from './calendar-icon.svg';
 import settingsIcon from './settings-icon.svg'; 
 import profileIcons from "./profile-icon.svg";
 function Settings(){
+    const [sidebarCollapsed, setSidebarCollapsed] = useState(
+      () => localStorage.getItem("sidebarCollapsed") === "1"
+    );
+    useEffect(() => {
+      localStorage.setItem("sidebarCollapsed", sidebarCollapsed ? "1" : "0");
+    }, [sidebarCollapsed]);
+
   const navigate= useNavigate();
   const candidatePage = () => {
     navigate("/candidates");
@@ -32,7 +39,16 @@ function Settings(){
      navigate("/login")
   }
     return(
-         <div className="container">
+          <div className={`container ${sidebarCollapsed ? "sidebar-collapsed" : ""}`}>
+      {/* Toggle button */}
+      <button
+        className="sidebar-toggle"
+        onClick={() => setSidebarCollapsed(v => !v)}
+        title={sidebarCollapsed ? "Show sidebar" : "Hide sidebar"}
+        aria-label="Toggle sidebar"
+      >
+        {sidebarCollapsed ? "☰" : "x"}
+      </button>
              
               <div className="sidebar">
                 <h2><img src={profileIcons} alt="Profile" className="nav-icon" /> John Doe</h2>
