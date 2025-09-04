@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate} from 'react-router-dom';
 import './register.css'
 
 //reads the backend URL
@@ -12,7 +13,10 @@ const [confirm, setConfirm]   = useState("");
 const [loading, setLoading]   = useState(false);
 const [error, setError]       = useState("");
 const [ok, setOk]             = useState("");
-
+const navigate= useNavigate();
+ const backToLogin=() =>{
+        navigate("/login");
+    };
 async function handleSubmit(e) {
   e.preventDefault();   // stops browser from reloading the page
   setError("");         // clear old errors
@@ -75,7 +79,11 @@ setConfirm("");
             
                   
             <button type="submit" style={{padding: '10px', width: '100%', marginTop:'10px'}}>Sign up</button>
-        </form>
+               <h6 onClick={backToLogin} className="back-to-login">
+             &lt; Back to Login
+          </h6>
+            </form>
+          
     </div>
  );
 }

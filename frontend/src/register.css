@@ -89,3 +89,11 @@
 .register-box h6:hover{
   color: #007BFF;
 }
+.back-to-login{
+    cursor: pointer;
+    margin-top: 5px;
+    padding-left: 15px;
+}
+.back-to-login:hover{
+    text-decoration: underline;
+}

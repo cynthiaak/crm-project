@@ -1,0 +1,177 @@
+.main-applicant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.back-btn {
+  align-self: flex-start; /* keep the back button on the left */
+  margin-bottom: 20px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #9CE5DE;
+  color: white;
+  cursor: pointer;
+}
+
+.candidate-photo {
+  width: 150px;
+  border-radius: 50%;
+  margin: 20px 0;
+}
+
+.applicant-name {
+  font-size: 32px;
+  margin: 10px 0 5px 0;
+}
+
+.applicant-role {
+  font-size: 20px;
+  color: #a9a9a9;
+  margin-bottom: 20px;
+}
+
+.applicant-info-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 300px; /* fixed width for card */
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f7f7f7;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  padding: 6px 0;
+  border-bottom: 1px solid #ccc;
+  width: 80%;          /* shorter line width */
+  margin: 0 auto;      /* center line */
+}
+
+.info-icon {
+  width: 16px;
+  height: 16px;
+}
+.cv-box {
+
+  width: 65%;
+  margin-left: 80px;
+  height: 100vh;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+
+}
+.cv-box h3{
+  font-size: 30px;
+}
+.applicant-history{
+  display: flex;
+  flex-direction: column;
+}
+
+.applicant-history h2 {
+  margin-bottom: 10px;
+}
+
+.add-btn {
+  margin-bottom: 15px; 
+  padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #9CE5DE;
+  color: white;
+  display: block;
+}
+
+
+.new-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px 0 20px 0;
+}
+
+.new-entry input,
+.new-entry textarea {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.new-entry button {
+  align-self: flex-start;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #9CE5DE;
+  color: white;
+  cursor: pointer;
+}
+
+.timeline {
+  margin-top: 20px;
+  position: relative;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 2px solid #ccc;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -11px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #9CE5DE;
+  border-radius: 50%;
+}
+
+.timeline-content {
+  padding-left: 10px;
+  font-size: 14px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.cv-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  height: 100%vh;
+  margin-left: 60px;
+  width: 65%;
+  margin-top: 40px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  transition: transform 0.2s;
+  margin-right: 5px;
+}
+
+
+
+.cv-box h3 {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
