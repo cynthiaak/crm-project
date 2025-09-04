@@ -1,11 +1,11 @@
 .card.upload-card {
   background: #fbd6c9;
   border-radius: 14px;
-  padding: 15px;
+  padding: 25px;
   height: 100%;
-  width: 360px;
+  width: 400px;
   box-sizing: border-box;
-  margin-left: -20px;
+  
 }
 
 .upload-title {

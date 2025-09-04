@@ -25,10 +25,11 @@ import settingsIcon from "./settings-icon.svg";
 import profileIcons from "./profile-icon.svg";
 
 function RMDashboard() {
-
+  
   const [sidebarCollapsed, setSidebarCollapsed] = useState(
     () => localStorage.getItem("sidebarCollapsed") === "1"
   );
+  const chartWidth = sidebarCollapsed ? 450 : 400;
   useEffect(() => {
     localStorage.setItem("sidebarCollapsed", sidebarCollapsed ? "1" : "0");
   }, [sidebarCollapsed]);
@@ -269,7 +270,8 @@ function RMDashboard() {
             </div>
             <div className="source-effectiveness-box">
               <h1>Source effectiveness</h1>
-              <PieChart width={400} height={250}>
+         
+              <PieChart width={chartWidth} height={250}>
                 <Pie
                   data={sourceData}
                   dataKey="value"
