@@ -54,6 +54,9 @@ body {
   width: 26%;
   margin-right: 0;
 }
+.container.sidebar-collapsed .candidates-table-header{
+grid-template-columns: 240px 255px 160px 150px 120px;
+}
 .container.sidebar-collapsed .source-effectiveness-box {
   min-width: 32%;
   padding-left: 10px;
@@ -313,7 +316,7 @@ input:focus {
 }
 .candidates-table-header{
   display: grid;
-  grid-template-columns: 200px 215px 125px 110px 120px;
+  grid-template-columns: 190px 200px 110px 110px 120px;
   background-color: #f2f2f2; 
   font-weight: bold;
   border-radius: 5px;
