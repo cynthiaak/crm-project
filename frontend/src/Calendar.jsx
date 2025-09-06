@@ -53,7 +53,7 @@ export default function Calendar(){
   useEffect(() => {
     localStorage.setItem("sidebarCollapsed", sidebarCollapsed ? "1" : "0");
   }, [sidebarCollapsed]);
-  
+
   const navigate = useNavigate();
 
   // ----- sidebar nav -----
@@ -123,7 +123,7 @@ export default function Calendar(){
         title={sidebarCollapsed ? "Show sidebar" : "Hide sidebar"}
         aria-label="Toggle sidebar"
       >
-        {sidebarCollapsed ? "☰" : "x"}
+        {sidebarCollapsed ? "☰" : "☰"}
       </button>
       {/* SIDEBAR */}
       <div className="sidebar">

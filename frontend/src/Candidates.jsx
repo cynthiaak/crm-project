@@ -105,7 +105,7 @@ function Candidates() {
         title={sidebarCollapsed ? "Show sidebar" : "Hide sidebar"}
         aria-label="Toggle sidebar"
       >
-        {sidebarCollapsed ? "☰" : "x"}
+        {sidebarCollapsed ? "☰" : "☰"}
       </button>
 
       <div className="sidebar">
