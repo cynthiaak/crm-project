@@ -8,6 +8,7 @@ import Tasks from "./Tasks.jsx";
 import Calendar from "./Calendar.jsx";
 import Applicant from "./Applicant.jsx";
 import Settings from "./Settings.jsx";
+import Clients from "./Clients.jsx";
 function App() {
   return (
       <Routes>
@@ -20,6 +21,7 @@ function App() {
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/applicant" element={<Applicant />} />
+        <Route path="/clients" element={<Clients />} />
     <Route path="/settings" element={<Settings />} />
       </Routes>
 

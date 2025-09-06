@@ -8,6 +8,7 @@ import tasksIcon from './tasks-icon.svg';
 import calendarIcon from './calendar-icon.svg'; 
 import settingsIcon from './settings-icon.svg'; 
 import profileIcons from "./profile-icon.svg";
+import clientsIcon from "./clients.svg"
 function Settings(){
     const [sidebarCollapsed, setSidebarCollapsed] = useState(
       () => localStorage.getItem("sidebarCollapsed") === "1"
@@ -38,6 +39,9 @@ function Settings(){
   const handleLogout = () => {
      navigate("/login")
   }
+  const clientsPage = () => {
+    navigate("/clients")
+  }
     return(
           <div className={`container ${sidebarCollapsed ? "sidebar-collapsed" : ""}`}>
       {/* Toggle button */}
@@ -63,6 +67,12 @@ function Settings(){
               <img src={candidatesIcon} alt="Candidates" className="nav-icon" /> Candidates
             </button>
           </li>
+             <li>
+                      <button className="nav-button" onClick={clientsPage}>
+                        <img src={clientsIcon} alt="Clients" className="nav-icon" />{" "}
+                        Clients
+                      </button>
+                    </li>
           <li>
             <button className="nav-button" onClick={tasksPage}>
               <img src={tasksIcon} alt="Tasks" className="nav-icon" /> Tasks

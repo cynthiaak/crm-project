@@ -23,6 +23,7 @@ import tasksIcon from "./tasks-icon.svg";
 import calendarIcon from "./calendar-icon.svg";
 import settingsIcon from "./settings-icon.svg";
 import profileIcons from "./profile-icon.svg";
+import clientsIcon from "./clients.svg";
 
 function RMDashboard() {
   
@@ -41,7 +42,7 @@ function RMDashboard() {
   const settingsPage = () => { navigate("/settings"); };
   const dashboardPage = () => { navigate("/rmdashboard"); };
   const handleLogout = () => { navigate("/login"); };
-
+  const clientsPage = () => { navigate("/clients"); };
   const data = [
     { date: "15 Aug", applied: 200, shortlisted: 60 },
     { date: "16 Aug", applied: 220, shortlisted: 80 },
@@ -94,6 +95,12 @@ function RMDashboard() {
             <button className="nav-button" onClick={candidatePage}>
               <img src={candidatesIcon} alt="Candidates" className="nav-icon" />{" "}
               Candidates
+            </button>
+          </li>
+              <li>
+            <button className="nav-button" onClick={clientsPage}>
+              <img src={clientsIcon} alt="Clients" className="nav-icon" />{" "}
+              Clients
             </button>
           </li>
           <li>

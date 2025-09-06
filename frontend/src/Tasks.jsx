@@ -9,7 +9,7 @@ import dashboardIcon from "./Dashboard-icon.svg";
 import settingsIcon from "./settings-icon.svg";
 import profileIcons from "./profile-icon.svg";3
 import candidatesIcon from "./people-icon.svg";
-
+import clientsIcon from "./clients.svg";
 const STORAGE_KEY = 'crm_calendar_events_v1';
 
 function todayYMD() {
@@ -34,7 +34,9 @@ export default function Tasks(){
 
   const navigate = useNavigate();
   const go = (p)=>()=>navigate(p);
-
+  const clientsPage = () => {
+    navigate("/clients")
+  }
   const [events, setEvents] = useState(() => {
     try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"); }
     catch { return []; }
@@ -93,6 +95,12 @@ export default function Tasks(){
         <ul>
           <li><button className="nav-button" onClick={go("/rmdashboard")}><img src={dashboardIcon} className="nav-icon" /> Dashboard</button></li>
           <li><button className="nav-button" onClick={go("/candidates")}><img src={candidatesIcon} className="nav-icon" /> Candidates</button></li>
+             <li>
+                      <button className="nav-button" onClick={clientsPage}>
+                        <img src={clientsIcon} alt="Clients" className="nav-icon" />{" "}
+                        Clients
+                      </button>
+                    </li>
           <li><button className="nav-button" onClick={go("/tasks")}><img src={tasksIcon} className="nav-icon" /> Tasks</button></li>
           <li><button className="nav-button" onClick={go("/calendar")}><img src={calendarIcon} className="nav-icon" /> Calendar</button></li>
           <li><button className="nav-button" onClick={go("/settings")}><img src={settingsIcon} className="nav-icon" /> Settings</button></li>

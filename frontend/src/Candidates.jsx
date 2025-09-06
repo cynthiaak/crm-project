@@ -5,7 +5,7 @@ import jobsIcon from './job-icon.svg';
 import candidatesIcon from './people-icon.svg';
 import tasksIcon from './tasks-icon.svg';
 import calendarIcon from './calendar-icon.svg';
-
+import clientsIcon from "./clients.svg";
 import settingsIcon from './settings-icon.svg';
 import profileIcons from "./profile-icon.svg";
 import './Candidates.css';
@@ -38,6 +38,9 @@ function Candidates() {
   }
   const handleLogout = () => {
     navigate("/login")
+  }
+  const clientsPage = () => {
+    navigate("/clients");
   }
   const [sortKey, setSortKey] = useState('name');
   const handleSortChange = (e) => {
@@ -118,6 +121,12 @@ function Candidates() {
               <img src={candidatesIcon} alt="Candidates" className="nav-icon" /> Candidates
             </button>
           </li>
+            <li>
+                      <button className="nav-button" onClick={clientsPage}>
+                        <img src={clientsIcon} alt="Clients" className="nav-icon" />{" "}
+                        Clients
+                      </button>
+                    </li>
           <li>
             <button className="nav-button" onClick={tasksPage}>
               <img src={tasksIcon} alt="Tasks" className="nav-icon" /> Tasks

@@ -8,7 +8,7 @@ import tasksIcon from "./tasks-icon.svg";
 import calendarIcon from "./calendar-icon.svg";
 import settingsIcon from "./settings-icon.svg";
 import profileIcons from "./profile-icon.svg";
-
+import clientsIcon from "./clients.svg"
 const API = import.meta.env.VITE_API_URL || "http://localhost:3000";
 const STORAGE_KEY = "crm_calendar_events_v1"; // localStorage fallback
 
@@ -64,7 +64,7 @@ export default function Calendar(){
   const settingsPage  = () => navigate("/settings");
   const dashboardPage = () => navigate("/rmdashboard");
   const handleLogout  = () => navigate("/login");
-
+  const clientsPage = () => navigate("/clients");
   // ----- calendar state -----
   const [cursor, setCursor] = useState(() => new Date()); // month being viewed
   const [events, setEvents] = useLocalEvents(); // {id, title, date, startTime, endTime, location, notes}
@@ -135,6 +135,12 @@ export default function Calendar(){
           <li><button className="nav-button" onClick={candidatePage}>
             <img src={candidatesIcon} alt="Candidates" className="nav-icon" /> Candidates
           </button></li>
+             <li>
+                      <button className="nav-button" onClick={clientsPage}>
+                        <img src={clientsIcon} alt="Clients" className="nav-icon" />{" "}
+                        Clients
+                      </button>
+                    </li>
           <li><button className="nav-button" onClick={tasksPage}>
             <img src={tasksIcon} alt="Tasks" className="nav-icon" /> Tasks
           </button></li>
