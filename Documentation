@@ -1,0 +1,35 @@
+CRM Recruitment System
+
+This project is a Recruitment CRM designed to help teams manage candidates throughout the hiring process. Built with React (frontend), Node.js + Express (backend), and PostgreSQL (database), it simplifies the workflow from application intake to hiring decisions.
+
+Architecture:   
+•	Frontend: React SPA (CRA or Vite) communicating with the API via JSON over HTTPS.
+•	Backend: Node.js + Express providing RESTful JSON APIs and handling authentication, business logic, validation, and DB access.
+•	Database: PostgreSQL with logical separation of tables for users, candidates, pipeline stages, calls, shortlist, feedback, and activity log.
+
+ Features
+•	User Management
+o	Secure authentication (email + password).
+•	Candidate Management
+o	Store and update candidate profiles.
+o	Upload & manage resumes (with metadata).
+•	Pipeline Tracking
+o	Record candidate stages (Applied → Screening → Interview → Offer → Hired).
+o	View history of stage changes with timestamps.
+•	Call Logs
+o	Record recruiter–candidate calls with duration, outcome, and next steps.
+•	Feedback System
+o	Collect recruiter evaluations (positive/negative/neutral sentiment).
+o	Add free-text notes for qualitative input.
+
+               Recruitment Statistics & Insights
+•	Applications Overview → Track how many candidates have applied overall.
+•	Pipeline Metrics → Count of candidates per stage (Applied, Shortlisted, Rejected, Hired).
+•	Conversion Rates → See what percentage of applicants progress from Applied → Shortlisted → Hired.
+•	Candidate Sources → Breakdown of applicants by origin (job board, referral, direct website, etc.).
+ 
+How the website works:
+1-	Sign in with email + password
+2-	Add a new candidate through the dashboard, fill the required fields (name, email, phone number, their CV, and any notes). When the profile is created, the candidate starts at the applied stage.
+3-	Move a candidate through the pipeline (applied, screening, interview, offer, hired (or rejected), and can add notes through the process that will be submitted under their name.   
+4-	Through the process, candidates are interviewed or called, and they add feedback and a timeline.
